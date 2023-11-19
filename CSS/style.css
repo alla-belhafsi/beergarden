@@ -255,43 +255,44 @@
                                 /*=============== LOGO ================*/
 
 #buttons {
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 75px 0px;  
+    margin: 75px 200px;  
 }
-.box-logo {
+.box-logo1 {
     display: block;
-    width: 25%;  
+    width: 50%;  
 }
-.logo-title img:hover {
-    mix-blend-mode: luminosity;
+.box-logo2 {
+    display: block;
+    width: 50%;  
 }
-/* .logo-title:hover {
-    border-radius: 50%;
-    background-color: #C49C5F;
-    mix-blend-mode: luminosity;
-} */
-.logo-title  {
+.logo-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 100%;
-    overflow: hidden;
+    position: relative;
     background-color: #C49C5F;
-    object-fit: cover; /*Redimensionne l'image pour remplir complètement le conteneur*/
-    clip-path: circle(18% at 50% 50%); /*Crée un cercle autour de l'image*/
-    transition: 1s;
+    clip-path: circle(24.3% at 50.0% 50%); /*Crée un cercle autour de l'image*/
 }
 
-.mini-title {
-    font-size: 16px;
+.logo-title:hover img {
+    mix-blend-mode: luminosity;
+}
+.logo-title:hover + .mini-title h2 {
+    color: #C49C5F;
+}
+.mini-title h2{
+    margin: 20px 0px 0px;
+    font-size: 20px;
     text-align: center;
+    transition: color 0.47s;
 }
 .latin {
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     color: #aeadab;
+    margin: 0px 0px 30px;
 }
 .logo-image {
     display: flex;
@@ -362,7 +363,17 @@
     #gallery {
         display: flex;
         flex-direction: wrap; 
-    }   
+    }
+
+    #buttons {
+        flex-wrap: wrap;
+        margin: 75px 10px;
+        
+    }
+    .logo-title {
+        clip-path: circle(22.7% at 50.0% 50%);
+    }
+    
 }
 
 @media screen and (min-width: 640px) and (max-width: 1108px) {
@@ -420,5 +431,12 @@
     }
     #third-image {
         width: 100%;
+    }
+
+    #buttons {
+        margin: 75px 10px;
+    }
+    .logo-title {
+        clip-path: circle(22.5% at 50% 50.8%);
     }
 }
